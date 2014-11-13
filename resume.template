@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+	<style>
+		/* This makes the text not selectable */
+		#download:after {
+			content: 'Download';
+		}
+	</style>
+	</head>
+	<body>
+		<a id="download" download="resume.json"></a>
+		<pre>{{{jsonresume}}}</pre>
+		<script>
+			(function(){
+				var resume = {{{jsonresume}}};
+				var downloadString = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(resume, null, 4));
+				document.getElementById('download').setAttribute('href', downloadString);
+			})();
+		</script>
+	</body>
+</html>

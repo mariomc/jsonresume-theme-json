@@ -1,0 +1,14 @@
+{
+  "name": "jsonresume-theme-json",
+  "version": "0.0.0",
+  "description": "JSON theme for JSON Resume",
+  "author": "Mário Gonçalves",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariomc/jsonresume-theme-json"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4"
+  }
+}
